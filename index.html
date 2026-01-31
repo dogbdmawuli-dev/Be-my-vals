@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Be My Valentine, Tracy ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px 30px;
+      max-width: 400px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      animation: float 3s ease-in-out infinite;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    button {
+      border: none;
+      border-radius: 30px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .yes {
+      background: #ff2e63;
+      color: #fff;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .no {
+      background: #fff;
+      color: #ff2e63;
+    }
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+    }
+    #response {
+      margin-top: 25px;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Tracy 💖</h1>
+    <p>From the moment you smile, my heart knows peace.<br />Will you be my Valentine?</p>
+    <div class="buttons">
+      <button class="yes" onclick="sayYes()">Yes 😍</button>
+      <button class="no" onclick="sayNo()">No 🙈</button>
+    </div>
+    <div id="response"></div>
+  </div>
+
+  <script>
+    function sayYes() {
+      document.getElementById('response').innerHTML = "Yaaay! 💕 I can’t wait to make this Valentine’s unforgettable, Tracy 🌹";
+    }
+    function sayNo() {
+      document.getElementById('response').innerHTML = "Haha 😅 I’ll ask again… because you’re too special 💘";
+    }
+  </script>
+</body>
+</html>
